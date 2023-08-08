@@ -1,0 +1,36 @@
+The CLI commands to start a django project:
+
+// Creating the directory for the project
+
+$ mkdir rp-portfolio
+$ cd rp-portfolio
+
+//Creating a virtual environment
+
+$ python3 -m venv venv
+
+//Activating the virutal environment
+
+$ source venv/bin/activate
+
+//Installing Django
+
+$ pip install Django
+
+//Creating the Django project
+
+$ django-admin startproject personal_project
+
+//Moving files up a directory for convenience
+
+$ mv personal_project/manage.py ./
+$ mv personal_project/personal_portfolio/* personal_project
+$ rm -r personal_project/personal_project/
+
+//Applying changes
+
+$ python manage.py migrate
+
+//Running the server
+
+$ python manage.py runserver
