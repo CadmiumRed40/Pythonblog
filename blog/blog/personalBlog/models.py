@@ -13,11 +13,11 @@ class Post(models.Model):
     updated_on =models.DateTimeField(auto_now= True)
     content = models.TextField()
     created_on =models.DateTimeField(auto_now_add=True)
-    status =models.IntergerField(choices=STATUS, default=0)
+    status =models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-created_on'] #sorts posts by the "created on date"
 
     def __str__(self):
         return self.title
-# Create your models here.
+
